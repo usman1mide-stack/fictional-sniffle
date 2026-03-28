@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>GPA Calculator</title>
+<link rel="stylesheet" href="clock.css">
+</head>
+<body>
+
+<div class="main">
+    <h1>GPA Calculator</h1>
+
+    <!-- Result display -->
+    <p id="result">GPA: 0.00</p>
+
+    <!-- Courses container -->
+    <div id="course">
+        <div class="course">
+            <input type="text" placeholder="Subject Name">
+            <input type="text" class="credit" inputmode="numeric" placeholder="Credit">
+            <input type="text" class="grade" placeholder="Grade">
+        </div>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+        <button id="tone">Add Course</button>
+        <button id="delete">Delete Course</button>
+        <button id="button">Clear Inputs</button>
+        <button id="butto">Calculate GPA</button>
+    </div>
+</div>
+
+<!-- JS loaded at the end -->
+<script src="clock.js"></script>
+</body>
+</html>

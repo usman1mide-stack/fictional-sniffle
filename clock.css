@@ -1,0 +1,131 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* BODY */
+body {
+    background: #0f172a;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* MAIN BOX */
+.main {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 500px;
+    min-width: 320px;   /* prevents box from shrinking too much */
+    color: white;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+}
+
+/* TITLE */
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+/* RESULT TEXT */
+#result {
+    text-align: right;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #22c55e;
+    font-weight: bold;
+}
+
+/* COURSE ROWS - RESPONSIVE */
+.course {
+    display: flex;
+    flex-wrap: wrap;  /* allow inputs to wrap on small screens */
+    gap: 10px;
+    margin-bottom: 12px;
+    align-items: center;
+}
+
+.course input:first-child {
+    flex: 1 1 100%;  /* Subject Name takes full width if needed */
+}
+
+.credit, .grade {
+    flex: 1 1 45%;    /* Credit and Grade side by side if space allows */
+    min-width: 60px;  /* prevent inputs from getting too small */
+}
+
+/* INPUTS */
+input {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: none;
+    background: #334155;
+    color: white;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+input::placeholder {
+    color: #cbd5f5;
+}
+
+input:focus {
+    outline: none;
+    background: #475569;
+    box-shadow: 0 0 5px #38bdf8;
+}
+
+/* BUTTONS CONTAINER - RESPONSIVE */
+.buttons {
+    display: flex;
+    flex-direction: column;  /* stack vertically */
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* BUTTON STYLE */
+.buttons button {
+    width: 100%;
+    padding: 14px 0;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    transition: all 0.2s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+/* BUTTON COLORS */
+#tone { background: #3b82f6; }       /* Add */
+#delete { background: #ef4444; }     /* Delete */
+#button { background: #f59e0b; }     /* Clear */
+#butto { background: #22c55e; }      /* Calculate */
+
+/* BUTTON HOVER EFFECT */
+.buttons button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.4);
+    opacity: 0.9;
+}
+
+/* SMALL SCREEN ADJUSTMENTS */
+@media (max-width: 400px) {
+    .buttons button {
+        font-size: 14px;
+        padding: 12px 0;
+    }
+    .credit, .grade {
+        flex: 1 1 100%;  /* stack inputs vertically on very small screens */
+    }
+}
